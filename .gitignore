@@ -58,16 +58,16 @@ uv/
 weightMap/
 ScreenshotMovieOutput/
 
-/sequences/*/Assets/Layout/
-/sequences/*/Assets/SetDressing/
-/sequences/*/Assets/Tools/
-/sequences/*/Assets/Materials/t01_master*
-/sequences/*/Assets/Resources/Prefabs/t01_master*
-/sequences/*/Assets/Scene/t01_master*
-/sequences/*/ProjectSettings/TagManager.asset
-/sequences/*/ProjectSettings/ProjectSettings.asset
-!/sequences/t01_master/ProjectSettings/TagManager.asset
-!/sequences/t01_master/ProjectSettings/ProjectSettings.asset
+sequences/*/Assets/Layout
+sequences/*/Assets/SetDressing
+sequences/*/Assets/Tools
+sequences/*/Assets/Materials/t01_master*
+sequences/*/Assets/Resources/Prefabs/t01_master*
+sequences/*/Assets/Scene/t01_master*
+sequences/*/ProjectSettings/TagManager.asset
+sequences/*/ProjectSettings/ProjectSettings.asset
+!sequences/t01_master/ProjectSettings/TagManager.asset
+!sequences/t01_master/ProjectSettings/ProjectSettings.asset
 
 # Unity3D generated meta files
 *.pidb.meta
