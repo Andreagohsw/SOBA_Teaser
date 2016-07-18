@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -18,7 +18,6 @@ ExportedObj/
 *.pidb
 *.booproj
 *.svd
-
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -59,13 +58,19 @@ uv/
 weightMap/
 ScreenshotMovieOutput/
 
+/sequences/*/Assets/Layout/
+/sequences/*/Assets/SetDressing/
+/sequences/*/Assets/Tools/
+/sequences/*/Assets/Materials/t01_master*
+/sequences/*/Assets/Resources/Prefabs/t01_master*
+/sequences/*/Assets/Scene/t01_master*
+/sequences/*/ProjectSettings/TagManager.asset
+/sequences/*/ProjectSettings/ProjectSettings.asset
+!/sequences/t01_master/ProjectSettings/TagManager.asset
+!/sequences/t01_master/ProjectSettings/ProjectSettings.asset
+
 # Unity3D generated meta files
 *.pidb.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
-
-# SOBA destination folder (assets getting imported)
-/[Aa]ssets/SOBA
->>>>>>> d0e376ffeb2970823c7f85a63d43701e9a64cd6e
-/[Aa]ssets/SOBA.meta
