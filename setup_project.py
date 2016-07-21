@@ -23,13 +23,11 @@ if os.name == 'nt':
 
 overwrite = None
 
-file_path = sys.argv[0]
+file_path = os.path.join(os.getcwd(),sys.argv[0])
 if len(sys.argv) == 2:
     overwrite = sys.argv[1]
 
 host_folder = os.path.dirname(file_path)
-if not host_folder:
-    host_folder = os.path.join(os.getcwd(), file_path)
 expected_folders = ['Assets', 'sequences']
 shot_projects = ['t01_01', 't01_02', 't01_03', 't01_04', 't01_05', 't01_06', 't01_07', 't01_08', 't01_09','t01_master', 't01_test']
 
