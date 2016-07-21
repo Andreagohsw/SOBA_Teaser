@@ -75,6 +75,7 @@ sequences/t01_01/Assets/Scene/t01_master
 
 sequences/t01_01/Assets/SetDressing
 
+sequences/t01_01/Assets/Textures
 sequences/t01_01/Assets/Tools
 
 sequences/t01_01/ProjectSettings/ProjectSettings.asset
@@ -91,6 +92,7 @@ sequences/t01_02/Assets/Scene/t01_master
 
 sequences/t01_02/Assets/SetDressing
 
+sequences/t01_02/Assets/Textures
 sequences/t01_02/Assets/Tools
 
 sequences/t01_02/ProjectSettings/ProjectSettings.asset
@@ -107,6 +109,7 @@ sequences/t01_03/Assets/Scene/t01_master
 
 sequences/t01_03/Assets/SetDressing
 
+sequences/t01_03/Assets/Textures
 sequences/t01_03/Assets/Tools
 
 sequences/t01_03/ProjectSettings/ProjectSettings.asset
@@ -123,6 +126,7 @@ sequences/t01_04/Assets/Scene/t01_master
 
 sequences/t01_04/Assets/SetDressing
 
+sequences/t01_04/Assets/Textures
 sequences/t01_04/Assets/Tools
 
 sequences/t01_04/ProjectSettings/ProjectSettings.asset
@@ -138,7 +142,7 @@ sequences/t01_05/Assets/Resources/Prefabs/t01_master
 sequences/t01_05/Assets/Scene/t01_master
 
 sequences/t01_05/Assets/SetDressing
-
+sequences/t01_05/Assets/Textures
 sequences/t01_05/Assets/Tools
 
 sequences/t01_05/ProjectSettings/ProjectSettings.asset
@@ -155,6 +159,7 @@ sequences/t01_06/Assets/Scene/t01_master
 
 sequences/t01_06/Assets/SetDressing
 
+sequences/t01_06/Assets/Textures
 sequences/t01_06/Assets/Tools
 
 sequences/t01_06/ProjectSettings/ProjectSettings.asset
@@ -172,6 +177,7 @@ sequences/t01_07/Assets/SetDressing
 
 sequences/t01_07/Assets/Tools
 
+sequences/t01_07/Assets/Textures
 sequences/t01_07/ProjectSettings/ProjectSettings.asset
 
 sequences/t01_07/ProjectSettings/TagManager.asset
@@ -185,6 +191,7 @@ sequences/t01_08/Assets/Resources/Prefabs/t01_master
 sequences/t01_08/Assets/Scene/t01_master
 
 sequences/t01_08/Assets/SetDressing
+sequences/t01_08/Assets/Textures
 
 sequences/t01_08/Assets/Tools
 
@@ -204,6 +211,7 @@ sequences/t01_09/Assets/SetDressing
 
 sequences/t01_09/Assets/Tools
 
+sequences/t01_09/Assets/Textures
 sequences/t01_09/ProjectSettings/ProjectSettings.asset
 
 sequences/t01_09/ProjectSettings/TagManager.asset
@@ -218,6 +226,7 @@ sequences/t01_test/Assets/SetDressing
 
 sequences/t01_test/Assets/Tools
 
+sequences/t01_test/Assets/Textures
 sequences/t01_test/ProjectSettings/ProjectSettings.asset
 
 sequences/t01_test/ProjectSettings/TagManager.asset
