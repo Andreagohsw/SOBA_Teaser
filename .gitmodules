@@ -1,3 +1,9 @@
 [submodule "SOBA_Assets"]
 	path = SOBA_Assets
 	url = git@github.com:Andreagohsw/SOBA_Assets.git
+[submodule "sequences/t01_master"]
+	path = sequences/t01_master
+	url = git@github.com:Andreagohsw/t01_master.git
+[submodule "sequences/t01_effects"]
+	path = sequences/t01_effects
+	url = git@github.com:Andreagohsw/t01_effects.git
