@@ -1,0 +1,3 @@
+[submodule "SOBA_Assets"]
+	path = SOBA_Assets
+	url = git@github.com:Andreagohsw/SOBA_Assets.git

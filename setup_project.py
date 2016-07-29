@@ -3,8 +3,6 @@ import sys
 import subprocess
 import warnings
 
-
-
 # Handles symlink creation if OS is windows and python version is 2.7
 if os.name == 'nt':
     os_symlink = getattr(os, "symlink", None)
@@ -28,7 +26,7 @@ if len(sys.argv) == 2:
     overwrite = sys.argv[1]
 
 host_folder = os.path.dirname(file_path)
-expected_folders = ['Assets', 'sequences']
+expected_folders = ['SOBA_Assets', 'sequences']
 shot_projects = ['t01_01', 't01_02', 't01_03', 't01_04', 't01_05', 't01_06', 't01_07', 't01_08', 't01_09','t01_master', 't01_test']
 
 # Retrieve list of directiories in the host folder 
@@ -47,7 +45,7 @@ if len(dirs) == len(expected_folders):
                         os.rmdir(tool_destination)
                     os.symlink(tool_source, tool_destination)
                 else:
-                    pass
+                    print "Error {0} exists please add overwrite flag to delete ".format(tool_destination)
             else:
                 os.symlink(tool_source, tool_destination)
 
@@ -62,7 +60,7 @@ if len(dirs) == len(expected_folders):
                         os.rmdir(texture_destination)
                     os.symlink(texture_source, texture_destination)
                 else:
-                    pass
+                    print "Error {0} exists please add overwrite flag to delete ".format(texture_destination)
             else:
                 os.symlink(texture_source, texture_destination)
 
@@ -77,7 +75,7 @@ if len(dirs) == len(expected_folders):
                         os.rmdir(setdressing_destination)
                     os.symlink(setdressing_source, setdressing_destination)
                 else:
-                    pass
+                    print "Error {0} exists please add overwrite flag to delete ".format(setdressing_destination)
             else:
                 os.symlink(setdressing_source, setdressing_destination)
             # Linking master with shots
@@ -94,7 +92,7 @@ if len(dirs) == len(expected_folders):
                                 os.rmdir(layoutanim_destination)
                             os.symlink(layoutanim_source, layoutanim_destination)
                         else:
-                            pass
+                            print "Error {0} exists please add overwrite flag to delete ".format(layoutanim_destination)
                     else:
                         os.symlink(layoutanim_source, layoutanim_destination)
 
@@ -110,7 +108,7 @@ if len(dirs) == len(expected_folders):
                             os.rmdir(prefabs_destination)
                         os.symlink(prefabs_source, prefabs_destination)
                     else:
-                        pass
+                        print "Error {0} exists please add overwrite flag to delete ".format(prefabs_destination)
                 else:
                     if not os.path.exists(os.path.dirname(prefabs_destination)):
                         os.makedirs(os.path.dirname(prefabs_destination))
@@ -126,7 +124,7 @@ if len(dirs) == len(expected_folders):
                             os.rmdir(materials_destination)
                         os.symlink(materials_source, materials_destination)
                     else:
-                        pass
+                        print "Error {0} exists please add overwrite flag to delete ".format(materials_destination)
                 else:
                     if not os.path.exists(os.path.dirname(materials_destination)):
                         os.makedirs(os.path.dirname(materials_destination))
@@ -143,7 +141,7 @@ if len(dirs) == len(expected_folders):
                                 os.rmdir(scene_destination)
                             os.symlink(scene_source, scene_destination)
                         else:
-                            pass
+                            print "Error {0} exists please add overwrite flag to delete ".format(scene_destination)
                     else:
                         if not os.path.exists(os.path.dirname(scene_destination)):
                             os.makedirs(os.path.dirname(scene_destination))
@@ -159,7 +157,7 @@ if len(dirs) == len(expected_folders):
                             os.rmdir(tagmanager_destination)
                         os.symlink(tagmanager_source, tagmanager_destination)
                     else:
-                        pass
+                        print "Error {0} exists please add overwrite flag to delete ".format(tagmanager_destination)
                 else:
                     if not os.path.exists(os.path.dirname(tagmanager_destination)):
                         os.makedirs(os.path.dirname(tagmanager_destination))
@@ -175,7 +173,7 @@ if len(dirs) == len(expected_folders):
                             os.rmdir(projectsettings_destination)
                         os.symlink(projectsettings_source, projectsettings_destination)
                     else:
-                        pass
+                        print "Error {0} exists please add overwrite flag to delete ".format(projectsettings_destination)
                 else:
                     if not os.path.exists(os.path.dirname(projectsettings_destination)):
                         os.makedirs(os.path.dirname(projectsettings_destination))
