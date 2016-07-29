@@ -27,7 +27,7 @@ if len(sys.argv) == 2:
 
 host_folder = os.path.dirname(file_path)
 expected_folders = ['SOBA_Assets', 'sequences']
-shot_projects = ['t01_01', 't01_02', 't01_03', 't01_04', 't01_05', 't01_06', 't01_07', 't01_08', 't01_09','t01_master', 't01_test']
+shot_projects = ['t01_01', 't01_02', 't01_03', 't01_04', 't01_05', 't01_06', 't01_07', 't01_08', 't01_09','t01_master', 't01_test', 't01_effects']
 
 # Retrieve list of directiories in the host folder 
 dirs = [x for x in os.walk(host_folder).next()[1] if x in expected_folders]
@@ -81,7 +81,7 @@ if len(dirs) == len(expected_folders):
             # Linking master with shots
             if not shot == 't01_master':
                 # Linking Anim and Cam alembics
-                if not shot == 't01_test':
+                if not shoot == 't01_test' or not shoot == 't01_effects' :
                     layoutanim_source = os.path.join(host_folder, 'Assets', 'Layout', 't01', 'abc', shot)
                     layoutanim_destination = os.path.join(host_folder, 'sequences', shot, 'Assets', 'Layout')
                     if os.path.exists(layoutanim_destination):
@@ -130,7 +130,7 @@ if len(dirs) == len(expected_folders):
                         os.makedirs(os.path.dirname(materials_destination))
                     os.symlink(materials_source, materials_destination)
 
-                if not shot == 't01_test':
+                if not shoot == 't01_test' or not shoot == 't01_effects':
                     scene_source = os.path.join(host_folder, 'sequences', 't01_master','Assets', 'Scene')
                     scene_destination = os.path.join(host_folder, 'sequences', shot, 'Assets', 'Scene', 't01_master')
                     if os.path.exists(scene_destination):
