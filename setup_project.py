@@ -81,7 +81,7 @@ if len(dirs) == len(expected_folders):
             # Linking master with shots
             if not shot == 't01_master':
                 # Linking Anim and Cam alembics
-                if not shoot == 't01_test' or not shoot == 't01_effects' :
+                if not shot == 't01_test' or not shot == 't01_effects' :
                     layoutanim_source = os.path.join(host_folder, 'Assets', 'Layout', 't01', 'abc', shot)
                     layoutanim_destination = os.path.join(host_folder, 'sequences', shot, 'Assets', 'Layout')
                     if os.path.exists(layoutanim_destination):
@@ -130,7 +130,7 @@ if len(dirs) == len(expected_folders):
                         os.makedirs(os.path.dirname(materials_destination))
                     os.symlink(materials_source, materials_destination)
 
-                if not shoot == 't01_test' or not shoot == 't01_effects':
+                if not shot == 't01_test' or not shot == 't01_effects':
                     scene_source = os.path.join(host_folder, 'sequences', 't01_master','Assets', 'Scene')
                     scene_destination = os.path.join(host_folder, 'sequences', shot, 'Assets', 'Scene', 't01_master')
                     if os.path.exists(scene_destination):
