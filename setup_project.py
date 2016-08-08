@@ -35,7 +35,7 @@ dirs = [x for x in os.walk(host_folder).next()[1] if x in expected_folders]
 if len(dirs) == len(expected_folders):
         for shot in shot_projects:
             # Linking Tool Folder
-            tool_source = os.path.join(host_folder, 'Assets', 'Tools')
+            tool_source = os.path.join(host_folder, expected_folders[0], 'Assets', 'Tools')
             tool_destination = os.path.join(host_folder, 'sequences', shot, 'Assets', 'Tools')
             if os.path.exists(tool_destination):
                 if overwrite:
@@ -50,7 +50,7 @@ if len(dirs) == len(expected_folders):
                 os.symlink(tool_source, tool_destination)
 
             # Linking Textures Folder
-            texture_source = os.path.join(host_folder, 'Assets', 'Textures')
+            texture_source = os.path.join(host_folder, expected_folders[0], 'Assets', 'Textures')
             texture_destination = os.path.join(host_folder, 'sequences', shot, 'Assets', 'Textures')
             if os.path.exists(texture_destination):
                 if overwrite:
@@ -65,7 +65,7 @@ if len(dirs) == len(expected_folders):
                 os.symlink(texture_source, texture_destination)
 
             # Linking FBX
-            setdressing_source = os.path.join(host_folder, 'Assets', 'SetDressing', 'Dead')
+            setdressing_source = os.path.join(host_folder,expected_folders[0], 'Assets', 'SetDressing', 'Dead')
             setdressing_destination = os.path.join(host_folder, 'sequences', shot, 'Assets', 'SetDressing')
             if os.path.exists(setdressing_destination):
                 if overwrite:
@@ -82,7 +82,8 @@ if len(dirs) == len(expected_folders):
             if not shot == 't01_master':
                 # Linking Anim and Cam alembics
                 if not shot == 't01_test' or not shot == 't01_effects' :
-                    layoutanim_source = os.path.join(host_folder, 'Assets', 'Layout', 't01', 'abc', shot)
+                    print 'SHOT ', shot
+                    layoutanim_source = os.path.join(host_folder, expected_folders[0], 'Assets', 'Layout', 't01', 'abc', shot)
                     layoutanim_destination = os.path.join(host_folder, 'sequences', shot, 'Assets', 'Layout')
                     if os.path.exists(layoutanim_destination):
                         if overwrite:
@@ -93,6 +94,8 @@ if len(dirs) == len(expected_folders):
                             os.symlink(layoutanim_source, layoutanim_destination)
                         else:
                             print "Error {0} exists please add overwrite flag to delete ".format(layoutanim_destination)
+                    elif not os.path.exists(layoutanim_source):
+                        pass
                     else:
                         os.symlink(layoutanim_source, layoutanim_destination)
 
@@ -153,8 +156,9 @@ if len(dirs) == len(expected_folders):
                     if overwrite:
                         if os.path.islink(tagmanager_destination):
                             os.unlink(tagmanager_destination)
+                            os.remove(tagmanager_destination)
                         else:
-                            os.rmdir(tagmanager_destination)
+                            os.remove(tagmanager_destination)
                         os.symlink(tagmanager_source, tagmanager_destination)
                     else:
                         print "Error {0} exists please add overwrite flag to delete ".format(tagmanager_destination)
@@ -169,8 +173,9 @@ if len(dirs) == len(expected_folders):
                     if overwrite:
                         if os.path.islink(projectsettings_destination):
                             os.unlink(projectsettings_destination)
+                            os.remove(tagmanager_destination)
                         else:
-                            os.rmdir(projectsettings_destination)
+                            os.remove(projectsettings_destination)
                         os.symlink(projectsettings_source, projectsettings_destination)
                     else:
                         print "Error {0} exists please add overwrite flag to delete ".format(projectsettings_destination)
